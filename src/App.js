@@ -1,7 +1,7 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
-import CreateOrder from './CreateOrder';
-import ViewOrders from './ViewOrders';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import CreateOrder from './Pages/CreateOrder';
+import ViewOrders from './Pages/Orders/orders';
 
 function App() {
   return (
@@ -18,10 +18,10 @@ function App() {
           </ul>
         </nav>
 
-        <Switch>
+        <Routes>
           <Route path="/" exact component={CreateOrder} />
           <Route path="/orders" component={ViewOrders} />
-        </Switch>
+        </Routes>
       </div>
     </Router>
   );
