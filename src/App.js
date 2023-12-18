@@ -1,7 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import CreateOrder from './Pages/CreateOrder';
+import CreateOrder from './Pages/CreateOrder/CreateOrder';
 import ViewOrders from './Pages/Orders/orders';
+import './App.css';
 
 function App() {
   return (
@@ -19,8 +20,8 @@ function App() {
         </nav>
 
         <Routes>
-          <Route path="/" exact component={CreateOrder} />
-          <Route path="/orders" component={ViewOrders} />
+          <Route path="/" element={<CreateOrder />} />
+          <Route path="/orders" element={<ViewOrders />} />
         </Routes>
       </div>
     </Router>

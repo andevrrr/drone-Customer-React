@@ -12,6 +12,7 @@ function Order({ id, customerName, pizzaType, orderTime, status, street, city, s
                 <p>Customer: {customerName}</p>
                 <p>Address: {street}, {city}, {state}, {zip}</p>
             </div>
+            <p>Status: {status}</p>
         </div>
     );
 }
